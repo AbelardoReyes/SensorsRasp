@@ -15,9 +15,8 @@ class Led:
     def off(self):
         GPIO.output(self.pin, False)
 
-    def blink(self, times, delay):
-        for i in range(times):
+    def blink(self):
             self.on()
-            time.sleep(delay)
+            time.sleep(3)
             self.off()
-            time.sleep(delay)
+            time.sleep(3)
