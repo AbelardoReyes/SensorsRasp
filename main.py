@@ -1,4 +1,3 @@
-import keyboard
 import threading
 from distancia import Distancia
 from temperatura import TempHum
@@ -27,20 +26,18 @@ class main:
         tempHum = TempHum()
         print("Temperatura: " + str(tempHum.getTemp()))
         print("Humedad: " + str(tempHum.getHum()))
-        print("Presione cualquier tecla para continuar...")
-        keyboard.wait()
+        input("Presione cualquier tecla para continuar...")
+
 
     def distancia(self):
         print("Distancia")
         distancia = Distancia(17, 27)
         print("Distancia: " + str(distancia.getDistancia()))
-        print("Presione cualquier tecla para continuar...")
-        keyboard.wait()
+        input("Presione cualquier tecla para continuar...")
 
     def led(self):
         print("Led")
         led = Led(18)
         led.blink(3, 0.5)
-        print("Presione cualquier tecla para continuar...")
-        keyboard.wait()
+        input("Presione cualquier tecla para continuar...")
 
