@@ -40,7 +40,7 @@ class main:
     def led(self):
         print("Led")
         led = Led(18)
-        led.blink(3, 0.5)
+        led.blink(3, 10)
         input("Presione cualquier tecla para continuar...")
 
 
