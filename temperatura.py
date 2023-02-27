@@ -1,12 +1,19 @@
+import Adafruit_DHT
+
+
 class TempHum:
     def __init__(self):
-        self.dht = Adafruit_DHT.DHT11
+        self.sensor = Adafruit_DHT.DHT11
         self.pin = 4
 
     def getTemp(self):
-        humedad, temperatura = Adafruit_DHT.read_retry(self.dht, self.pin)
-        return temperatura
+        humidity, temperature = Adafruit_DHT.read_retry(self.sensor, self.pin)
+        return temperature
 
     def getHum(self):
-        humedad, temperatura = Adafruit_DHT.read_retry(self.dht, self.pin)
-        return humedad
+        humidity, temperature = Adafruit_DHT.read_retry(self.sensor, self.pin)
+        return humidity
+
+    def getTempHum(self):
+        humidity, temperature = Adafruit_DHT.read_retry(self.sensor, self.pin)
+        return temperature, humidity
