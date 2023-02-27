@@ -17,6 +17,3 @@ class Led:
 
     def blink(self):
             self.on()
-            time.sleep(3)
-            self.off()
-            time.sleep(3)
