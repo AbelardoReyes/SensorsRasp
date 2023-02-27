@@ -40,4 +40,8 @@ class main:
         led = Led(18)
         led.blink(3, 0.5)
         input("Presione cualquier tecla para continuar...")
+        
+if __name__ == "__main__":
+    menu = main()
+    menu.main()
 
