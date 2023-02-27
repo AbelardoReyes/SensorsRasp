@@ -10,7 +10,8 @@ class main:
         while opcion != 0:
             print("1. Temperatura y humedad")
             print("2. Distancia")
-            print("3. Salir")
+            print("3. Led")
+            print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
                 self.temHum()

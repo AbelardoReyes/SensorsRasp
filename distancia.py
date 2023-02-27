@@ -4,6 +4,7 @@ import time
 
 class Distancia:
     def __init__(self, trig, echo):
+        GPIO.setmode(GPIO.BOARD)
         self.trig = trig
         self.echo = echo
         GPIO.setup(self.trig, GPIO.OUT)
