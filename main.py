@@ -6,8 +6,8 @@ from led import Led
 
 class main:
     def main(self):
-        opcion = 0
-        while opcion != 3:
+        opcion = 10
+        while opcion != 0:
             print("1. Temperatura y humedad")
             print("2. Distancia")
             print("3. Salir")
@@ -17,6 +17,8 @@ class main:
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
+                self.led()
+            elif opcion == 0:
                 print("Saliendo...")
             else:
                 print("Opcion invalida")
@@ -27,7 +29,6 @@ class main:
         print("Temperatura: " + str(tempHum.getTemp()))
         print("Humedad: " + str(tempHum.getHum()))
         input("Presione cualquier tecla para continuar...")
-
 
     def distancia(self):
         print("Distancia")
@@ -40,8 +41,8 @@ class main:
         led = Led(18)
         led.blink(3, 0.5)
         input("Presione cualquier tecla para continuar...")
-        
+
+
 if __name__ == "__main__":
     menu = main()
     menu.main()
-
