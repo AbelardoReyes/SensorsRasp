@@ -17,3 +17,4 @@ class Led:
 
     def blink(self):
             self.on()
+            input("Presione cualquier tecla para continuar...")
