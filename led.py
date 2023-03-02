@@ -9,7 +9,7 @@ class Led:
         GPIO.setup(self.pin, GPIO.OUT)
 
     def blink(self):
-        cont = 3
+        cont = 0
         while cont <= 3:
             self.on()
             time.sleep(1)
