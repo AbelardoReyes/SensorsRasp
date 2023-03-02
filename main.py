@@ -18,9 +18,7 @@ class main:
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
-                self.encenderLed()
-            elif opcion == 4:
-                self.apagarLed()
+                self.led()
             elif opcion == 0:
                 print("Saliendo...")
             else:
@@ -38,12 +36,10 @@ class main:
         
 
     def encenderLed(self):
+        print("Led")
         led = Led(5)
         led.on()
-        
-    def apagarLed(self):
-        led = Led(5)
-        led.off()
+        input("Presione cualquier tecla para continuar...")
 
 
 if __name__ == "__main__":
