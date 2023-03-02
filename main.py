@@ -1,6 +1,5 @@
 import threading
 from ultrasonico import Ultrasonico
-from temperatura import Temperatura
 from led import Led
 
 
