@@ -18,7 +18,7 @@ class main:
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
-                self.led()
+                self.encenderLed()
             elif opcion == 0:
                 print("Saliendo...")
             else:
