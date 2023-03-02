@@ -1,6 +1,6 @@
 import threading
-from distancia import Distancia
-from temperatura import TempHum
+from ultrasonico import Ultrasonico
+from temperatura import Temperatura
 from led import Led
 
 
@@ -26,16 +26,17 @@ class main:
 
     def temHum(self):
         print("Temperatura y humedad")
-        tempHum = TempHum()
-        print("Temperatura: " + str(tempHum.getTemp()))
-        print("Humedad: " + str(tempHum.getHum()))
+        temperatura = Temperatura(4)
+        print("Temperatura: ", temperatura.leer()[1], "C")
         input("Presione cualquier tecla para continuar...")
+
 
     def distancia(self):
         print("Distancia")
-        distancia = Distancia(17, 27)
-        print("Distancia: " + str(distancia.getDistancia()))
+        ultrasonico = Ultrasonico(23, 24)
+        print("Distancia: ", ultrasonico.medir(), "cm")
         input("Presione cualquier tecla para continuar...")
+        
 
     def led(self):
         print("Led")
