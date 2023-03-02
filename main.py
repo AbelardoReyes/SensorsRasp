@@ -9,7 +9,8 @@ class main:
         while opcion != 0:
             print("1. Temperatura y humedad")
             print("2. Distancia")
-            print("3. Led")
+            print("3. Enceder Led")
+            print("4. Apagar Led")
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
@@ -17,7 +18,9 @@ class main:
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
-                self.led()
+                self.encenderLed()
+            elif opcion == 4:
+                self.apagarLed()
             elif opcion == 0:
                 print("Saliendo...")
             else:
@@ -34,11 +37,13 @@ class main:
         input("Presione cualquier tecla para continuar...")
         
 
-    def led(self):
-        print("Led")
+    def encenderLed(self):
         led = Led(5)
-        led.blink()
-        input("Presione cualquier tecla para continuar...")
+        led.on()
+        
+    def apagarLed(self):
+        led = Led(5)
+        led.off()
 
 
 if __name__ == "__main__":
