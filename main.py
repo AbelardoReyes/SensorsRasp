@@ -26,9 +26,6 @@ class main:
 
     def temHum(self):
         print("Temperatura y humedad")
-        temperatura = Temperatura(4)
-        print("Temperatura: ", temperatura.leer()[1], "C")
-        input("Presione cualquier tecla para continuar...")
 
 
     def distancia(self):
