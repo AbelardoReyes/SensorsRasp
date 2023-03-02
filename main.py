@@ -36,7 +36,7 @@ class main:
 
     def led(self):
         print("Led")
-        led = Led(12)
+        led = Led(5)
         led.off()
         input("Presione cualquier tecla para continuar...")
 
