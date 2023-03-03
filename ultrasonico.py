@@ -1,6 +1,6 @@
 import time
 import RPi.GPIO as GPIO
-from keyboard import Keyboard
+import keyboard
 
 
 class Ultrasonico:
@@ -12,7 +12,7 @@ class Ultrasonico:
         GPIO.setup(self.echo, GPIO.IN)
 
     def medir(self):
-        while Keyboard.is_pressed('q') == False:
+        while keyboard.press('q') == False:
             GPIO.output(self.trigger, False)
             time.sleep(0.00001)
             GPIO.output(self.trigger, True)
