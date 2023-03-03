@@ -1,6 +1,7 @@
 import threading
 from ultrasonico import Ultrasonico
 from led import Led
+from temperatura import Temperatura
 import os
 
 
@@ -30,6 +31,10 @@ class main:
 
     def temHum(self):
         print("Temperatura y humedad")
+        tephum = Temperatura()
+        print("Temperatura: ", tephum.get_temperatura())
+        print("Humedad: ", tephum.get_humedad())
+        input("Presione enter para continuar...")
 
     def distancia(self):
         print("Distancia")
