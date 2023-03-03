@@ -12,12 +12,12 @@ class Ultrasonico:
 
     def medir(self):
         GPIO.output(self.trigger, False)
-        time.sleep(0.5)
+        time.sleep(0.00001)
         GPIO.output(self.trigger, True)
-        
-        while GPIO.input(self.echo) == 0:
+
+        while GPIO.input(self.echo) == False:
             pulse_start = time.time()
-        while GPIO.input(self.echo) == 1:
+        while GPIO.input(self.echo) == True:
             pulse_end = time.time()
         pulse_duration = pulse_end - pulse_start
         distance = pulse_duration * 17150
