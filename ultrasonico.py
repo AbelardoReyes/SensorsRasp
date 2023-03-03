@@ -15,10 +15,10 @@ class Ultrasonico:
         time.sleep(0.00001)
         GPIO.output(self.trigger, False)
 
-        while GPIO.input(self.echo) == False:
+        while GPIO.input(self.echo) == 0:
             start = time.time()
 
-        while GPIO.input(self.echo) == True:
+        while GPIO.input(self.echo) == 1:
             end = time.time()
 
         sig_time = end-start
