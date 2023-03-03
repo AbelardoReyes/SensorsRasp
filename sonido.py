@@ -1,16 +1,13 @@
 import RPi.GPIO as GPIO
 
-class Sonido:
-    def __init__(self, pin):
-        self.pin = pin
+class SoundSensor:
+    def __init__(self, pin_number):
+        self.pin_number = pin_number
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(self.pin, GPIO.OUT)
+        GPIO.setup(pin_number, GPIO.IN)
 
-    def on(self):
-        GPIO.output(self.pin, GPIO.HIGH)
+    def read_sound(self):
+        return GPIO.input(self.pin_number)
 
-    def off(self):
-        GPIO.output(self.pin, GPIO.LOW)
-
-    def __del__(self):
+    def cleanup(self):
         GPIO.cleanup()

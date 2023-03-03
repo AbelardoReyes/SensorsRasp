@@ -1,6 +1,7 @@
 import threading
 from ultrasonico import Ultrasonico
 from led import Led
+from sonido import SoundSensor
 from temperatura import Temperatura
 import os
 
@@ -22,6 +23,8 @@ class main:
                 self.distancia()
             elif opcion == 3:
                 self.led()
+            elif opcion == 4:
+                self.sonido()
             elif opcion == 5:
                 self.todos()
             elif opcion == 0:
@@ -45,6 +48,10 @@ class main:
         print("Led")
         led = Led(22)
         led.blink()
+    
+    def sonido(self):
+        sonido = SoundSensor(17)
+        sonido.read_sound()
     
     def todos(self):
         print("Todos")
