@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 
 class Temperatura:
     def __init__(self):
-        self.sensor = Adafruit_DHT.DHT22
+        self.sensor = Adafruit_DHT.DHT11
         self.pin = 4
         GPIO.setmode(GPIO.BCM)
 
