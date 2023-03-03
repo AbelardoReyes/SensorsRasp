@@ -14,16 +14,15 @@ class LedView:
             print("3. Parpadear")
             print("4. Salir")
             opcion = int(input("Opcion: "))
-            match opcion:
-                case 1:
-                    self.led.on()
-                case 2:
-                    self.led.off()
-                case 3:
-                    self.led.blink()
-                case 4:
-                    print("Saliendo...")
-                    return
-                case _:
-                    print("Opcion invalida")
-            return opcion
+            if opcion == 1:
+                self.led.on()
+            if opcion == 2:
+                self.led.off()
+            if opcion == 3:
+                self.led.blink()
+            if opcion == 4:
+                print("Saliendo...")
+                return
+            else:
+                print("Opcion invalida")
+
