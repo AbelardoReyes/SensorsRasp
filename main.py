@@ -21,7 +21,7 @@ class main:
                 self.distancia()
             elif opcion == 3:
                 self.led()
-            elif opcion == 2:
+            elif opcion == 5:
                 self.todos()
             elif opcion == 0:
                 print("Saliendo...")
