@@ -19,7 +19,9 @@ class main:
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
-                self.encenderLed()
+                self.led()
+            elif opcion == 4:
+                self.todos()
             elif opcion == 0:
                 print("Saliendo...")
             else:
@@ -28,20 +30,21 @@ class main:
     def temHum(self):
         print("Temperatura y humedad")
 
-
     def distancia(self):
         print("Distancia")
         ultrasonico = Ultrasonico(5, 6)
         print("Distancia: ", ultrasonico.medir(), "cm")
-        input("Presione cualquier tecla para continuar...")
-        
 
-    def encenderLed(self):
+    def led(self):
         os.system("cls")
         print("Led")
-        led = Led(5)
-        led.on()
-        input("Presione cualquier tecla para continuar...")
+        led = Led(13)
+        led.blink()
+    
+    def todos(self):
+        print("Todos")
+        self.distancia()
+        self.led()
 
 
 if __name__ == "__main__":
