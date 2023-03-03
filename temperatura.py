@@ -13,7 +13,8 @@ class Temperatura:
     def get_temperatura_humedad(self):
         temperatura, humedad = Adafruit_DHT.read_retry(self.sensor, self.pin)
         if temperatura is not None and humedad is not None:
-            return temperatura, humedad
+            datos = [temperatura, humedad]
+            return datos
         else:
             return None
 
