@@ -19,9 +19,12 @@ class Ultrasonico:
             pulse_start = time.time()
         while GPIO.input(self.echo) == True:
             pulse_end = time.time()
-        pulse_duration = pulse_end - pulse_start
-        distance = pulse_duration * 17150
-        distance = round(distance, 2)
+        sig_time = pulse_end - pulse_start
+        # CM:
+        distance = sig_time / 0.000058
+        # inches:
+        # distance = sig_time / 0.000148
+        print('Distance: {} centimeters'.format(distance))
         return distance
 
     def __del__(self):
