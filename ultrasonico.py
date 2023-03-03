@@ -2,7 +2,6 @@ import time
 import RPi.GPIO as GPIO
 
 
-
 class Ultrasonico:
     def __init__(self, trigger, echo):
         self.trigger = trigger

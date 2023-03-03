@@ -1,9 +1,8 @@
-import threading
 from ultrasonico import Ultrasonico
 from led import Led
 from sonido import SoundSensor
 from temperatura import Temperatura
-import os
+from views.led_view import LedView
 
 
 class main:
@@ -18,7 +17,7 @@ class main:
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
-                self.temHum()
+                LedView().menu()
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
