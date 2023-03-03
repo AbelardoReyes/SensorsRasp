@@ -14,14 +14,26 @@ class Ultrasonico:
         GPIO.output(self.trigger, True)
         time.sleep(0.00001)
         GPIO.output(self.trigger, False)
-        start = time.time()
-        while GPIO.input(self.echo) == 0:
-            start = time.time()
-        while GPIO.input(self.echo) == 1:
-            stop = time.time()
-        elapsed = stop - start
-        distance = (elapsed * 34300)/2
-        return distance
 
-    def __del__(self):
-        GPIO.cleanup()
+        while GPIO.input(self.echo) == False:
+            start = time.time()
+
+        while GPIO.input(self.echo) == True:
+            end = time.time()
+
+        sig_time = end-start
+
+        # CM:
+        distance = sig_time / 0.000058
+
+        # inches:
+        # distance = sig_time / 0.000148
+
+        print('Distance: {} centimeters'.format(distance))
+
+
+GPIO.cleanup()
+
+
+def __del__(self):
+    GPIO.cleanup()
