@@ -51,7 +51,7 @@ class main:
     
     def sonido(self):
         sonido = SoundSensor(17)
-        sonido.read_sound()
+        print("Sonido: ", sonido.read_sound())
     
     def todos(self):
         print("Todos")
