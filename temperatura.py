@@ -11,7 +11,7 @@ class Temperatura:
         GPIO.output(self.relay_pin, GPIO.HIGH)
 
     def get_temperatura_humedad(self):
-        temperatura, humedad = Adafruit_DHT.read_retry(self.sensor, self.pin)
+        temperatura, humedad = Adafruit_DHT.read(self.sensor, self.pin)
         if temperatura is not None and humedad is not None:
             temperaturaC = (temperatura - 32) * 5/9
             datos = [temperaturaC, humedad]
