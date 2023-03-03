@@ -1,6 +1,7 @@
 import threading
 from ultrasonico import Ultrasonico
 from led import Led
+import os
 
 
 class main:
@@ -36,6 +37,7 @@ class main:
         
 
     def encenderLed(self):
+        os.system("cls")
         print("Led")
         led = Led(5)
         led.on()
