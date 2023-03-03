@@ -10,8 +10,9 @@ class main:
         while opcion != 0:
             print("1. Temperatura y humedad")
             print("2. Distancia")
-            print("3. Enceder Led")
-            print("4. Apagar Led")
+            print("3. Led")
+            print("4. Sonido")
+            print("5. Leer todos los sensores")
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
@@ -20,7 +21,7 @@ class main:
                 self.distancia()
             elif opcion == 3:
                 self.led()
-            elif opcion == 4:
+            elif opcion == 2:
                 self.todos()
             elif opcion == 0:
                 print("Saliendo...")
