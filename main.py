@@ -36,7 +36,6 @@ class main:
         print("Distancia: ", ultrasonico.medir(), "cm")
 
     def led(self):
-        os.system("cls")
         print("Led")
         led = Led(13)
         led.blink()
