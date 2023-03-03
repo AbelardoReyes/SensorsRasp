@@ -17,7 +17,7 @@ class main:
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
-                LedView().menu()
+                LedView(22).menu()
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
