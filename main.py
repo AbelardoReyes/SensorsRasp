@@ -38,7 +38,7 @@ class main:
 
     def distancia(self):
         print("Distancia")
-        ultrasonico = Ultrasonico(5, 6)
+        ultrasonico = Ultrasonico(24, 23)
         print("Distancia: ", ultrasonico.medir(), "cm")
 
     def led(self):
