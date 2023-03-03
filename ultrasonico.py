@@ -1,6 +1,6 @@
 import time
 import RPi.GPIO as GPIO
-import keyboard
+
 
 
 class Ultrasonico:
@@ -12,17 +12,17 @@ class Ultrasonico:
         GPIO.setup(self.echo, GPIO.IN)
 
     def medir(self):
-        while keyboard.press('q') == False:
-            GPIO.output(self.trigger, False)
-            time.sleep(0.00001)
-            GPIO.output(self.trigger, True)
-            while GPIO.input(self.echo) == False:
-                pulse_start = time.time()
-            while GPIO.input(self.echo) == True:
-                pulse_end = time.time()
-            sig_time = pulse_end - pulse_start
-            distance = sig_time / 0.000058  
-            return distance
+        GPIO.output(self.trigger, False)
+        time.sleep(0.00001)
+        GPIO.output(self.trigger, True)
+
+        while GPIO.input(self.echo) == False:
+            pulse_start = time.time()
+        while GPIO.input(self.echo) == True:
+            pulse_end = time.time()
+        sig_time = pulse_end - pulse_start
+        distance = sig_time / 0.000058
+        return distance
 
     def __del__(self):
         GPIO.cleanup()
