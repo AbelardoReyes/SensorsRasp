@@ -16,7 +16,7 @@ class Temperatura:
             datos = [temperatura, humedad]
             return datos
         else:
-            return None
+            return [0, 0]
 
     def encender_relay(self):
         GPIO.output(self.relay_pin, GPIO.LOW)
