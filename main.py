@@ -32,8 +32,9 @@ class main:
     def temHum(self):
         print("Temperatura y humedad")
         temperatura = Temperatura()
-        print("Temperatura: ", temperatura.get_temperatura_humedad()[0], "C")
-        print("Humedad: ", temperatura.get_temperatura_humedad()[1], "%")
+        datos = temperatura.get_temperatura_humedad()
+        print("Temperatura: ", datos[0], "C")
+        print("Humedad: ", datos[1] , "%")
 
     def distancia(self):
         print("Distancia")
