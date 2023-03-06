@@ -5,6 +5,7 @@ from sensores.temperatura import Temperatura
 from views.distance_view import DistanceView
 from views.led_view import LedView
 from views.sound_view import SoundView
+from views.temp_view import TempView
 
 
 class main:
@@ -19,7 +20,7 @@ class main:
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
-                print("Si")
+                TempView().temHum()
             elif opcion == 2:
                 DistanceView().leer()
             elif opcion == 3:
