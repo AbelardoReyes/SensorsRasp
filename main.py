@@ -29,17 +29,22 @@ class main:
                 SoundView().leer()
             elif opcion == 5:
                 self.todos()
+
+            elif opcion == 8:
+                self.temHum()
+
             elif opcion == 0:
                 print("Saliendo...")
             else:
                 print("Opcion invalida")
+
 
     def temHum(self):
         print("Temperatura y humedad")
         temperatura = Temperatura()
         datos = temperatura.get_temperatura_humedad()
         print("Temperatura: ", datos[0], "C")
-        print("Humedad: ", datos[1] , "%")
+        print("Humedad: ", datos[1], "%")
 
     def distancia(self):
         print("Distancia")
