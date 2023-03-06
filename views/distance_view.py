@@ -1,3 +1,4 @@
+import time
 
 from sensores.sensor import Sensor
 
@@ -8,6 +9,10 @@ class DistanceView:
 
     def leer(self):
         print("Para detener la lectura pulsa Ctrl + C")
-        while True:
-            print("Distancia: ", self.sensor.medir(), "cm")
-            
+        try:
+            while True:
+                print("Distancia: ", self.sensor.medir(), "cm")
+                time.sleep(1)
+        except KeyboardInterrupt:
+            print("Fin de la lectura")
+            return
