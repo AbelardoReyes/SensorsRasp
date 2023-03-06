@@ -37,11 +37,9 @@ class Sensor:
             return [0, 0]
 
     def medir(self):
-        print("echo: ", self.pin_in, "trigger: ", self.pin_out)
         GPIO.output(self.pin_out, False)
         time.sleep(0.00001)
         GPIO.output(self.pin_out, True)
-
 
         while GPIO.input(self.pin_in) == False:
             pulse_start = time.time()
@@ -51,8 +49,5 @@ class Sensor:
         distance = sig_time / 0.000058
         return distance
 
-    def set_bmc(self):
-        GPIO.setmode(GPIO.BCM)
-
-    def cleanup(self):
+    def __del__(self):
         GPIO.cleanup()
