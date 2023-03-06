@@ -41,6 +41,7 @@ class Sensor:
         time.sleep(0.00001)
         GPIO.output(self.pin_out, True)
 
+
         while GPIO.input(self.pin_in) == False:
             pulse_start = time.time()
         while GPIO.input(self.pin_in) == True:
@@ -48,6 +49,9 @@ class Sensor:
         sig_time = pulse_end - pulse_start
         distance = sig_time / 0.000058
         return distance
+
+    def set_bmc(self):
+        GPIO.setmode(GPIO.BCM)
 
     def cleanup(self):
         GPIO.cleanup()

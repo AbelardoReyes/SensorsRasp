@@ -6,6 +6,7 @@ class DistanceView:
     def __init__(self, pin_in=6, pin_out=5):
         self.sensor = Sensor(pin_in, pin_out)
         self.sensor.cleanup()
+        self.sensor.set_bmc()
 
     def leer(self):
         print("Para detener la lectura pulsa Ctrl + C")
