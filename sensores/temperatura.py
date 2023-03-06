@@ -1,9 +1,10 @@
 import Adafruit_DHT
 
+
 class Temperatura:
     def __init__(self):
         self.sensor = Adafruit_DHT.DHT11
-        self.pin = 4
+        self.pin = 16
 
     def get_temperatura_humedad(self):
         temperatura, humedad = Adafruit_DHT.read(self.sensor, self.pin)
