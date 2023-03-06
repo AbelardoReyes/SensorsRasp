@@ -1,6 +1,6 @@
 import time
 
-from sensores.sensor import Sensor
+from sensor import Sensor
 
 
 class SoundView:

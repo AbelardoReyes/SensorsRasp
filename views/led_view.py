@@ -1,7 +1,4 @@
-
-
-from sensores.led import Led
-from sensores.sensor import Sensor
+from sensor import Sensor
 
 
 class LedView:
@@ -13,8 +10,7 @@ class LedView:
             print("1. Encender")
             print("2. Apagar")
             print("3. Parpadear")
-            print("4. Cambiar pin")
-            print("5. Salir")
+            print("4. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
                 self.sensor.on()
