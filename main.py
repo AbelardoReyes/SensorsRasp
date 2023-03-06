@@ -12,7 +12,6 @@ class main:
             print("2. Distancia")
             print("3. Led")
             print("4. Sonido")
-            print("5. Leer todos los sensores")
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
