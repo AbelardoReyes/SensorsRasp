@@ -23,13 +23,6 @@ class LedView:
             if opcion == 3:
                 self.sensor.blink()
             if opcion == 4:
-                try:
-                    pin = int(input("Pin: "))
-                    self.led = Led(pin)
-                except ValueError:
-                    print("Pin invalido")
-                    continue
-            if opcion == 5:
                 print("Saliendo...")
                 break
             else:
