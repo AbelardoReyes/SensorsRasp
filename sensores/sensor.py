@@ -48,3 +48,6 @@ class Sensor:
         sig_time = pulse_end - pulse_start
         distance = sig_time / 0.000058
         return distance
+
+    def cleanup(self):
+        GPIO.cleanup()
