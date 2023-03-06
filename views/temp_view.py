@@ -4,7 +4,7 @@ from sensores.sensor import Sensor
 
 
 class TempView:
-    def __init__(self, pin_in=4):
+    def __init__(self, pin_in=16):
         self.sensor = Sensor(pin_in)
 
     def temHum(self):
