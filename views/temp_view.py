@@ -12,6 +12,8 @@ class TempView:
             while True:
                 print("Temperatura y humedad")
                 datos = self.sensor.get_temperatura_humedad()
+                if datos[0] == 0 and datos[1] == 0:
+                    continue
                 print("Temperatura: ", datos[0], "C")
                 print("Humedad: ", datos[1], "%")
                 time.sleep(1)
