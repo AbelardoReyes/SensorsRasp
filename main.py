@@ -1,7 +1,7 @@
-from ultrasonico import Ultrasonico
-from led import Led
-from sonido import SoundSensor
-from temperatura import Temperatura
+from sensores.ultrasonico import Ultrasonico
+from sensores.led import Led
+from sensores.sonido import SoundSensor
+from sensores.temperatura import Temperatura
 from views.led_view import LedView
 
 
@@ -17,7 +17,7 @@ class main:
             print("0. Salir")
             opcion = int(input("Opcion: "))
             if opcion == 1:
-                LedView(22).menu()
+                LedView().menu()
             elif opcion == 2:
                 self.distancia()
             elif opcion == 3:
