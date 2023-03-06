@@ -16,6 +16,7 @@ class SoundView:
                     print("Sonido detectado")
                 else:
                     print("...")
+                time.sleep(0.5)
 
         except KeyboardInterrupt:
             print("Fin de la lectura")
