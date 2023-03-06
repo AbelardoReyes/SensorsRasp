@@ -10,3 +10,4 @@ class DistanceView:
         print("Para detener la lectura pulsa Ctrl + C")
         while True:
             print("Distancia: ", self.sensor.medir(), "cm")
+            

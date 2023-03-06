@@ -10,4 +10,4 @@ class SoundView:
     def leer(self):
         print("Para detener la lectura pulsa Ctrl + C")
         while True:
-            self.sensor.read()
+            print(self.sensor.read())
