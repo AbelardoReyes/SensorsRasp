@@ -37,6 +37,7 @@ class Sensor:
             return [0, 0]
 
     def medir(self):
+        print("echo: ", self.pin_in, "trigger: ", self.pin_out)
         GPIO.output(self.pin_out, False)
         time.sleep(0.00001)
         GPIO.output(self.pin_out, True)
